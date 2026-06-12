@@ -24,8 +24,9 @@ import { fileURLToPath } from 'url';
 import { marked } from 'marked';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const FONTS = `${HERE}/assets/fonts`;
-const LOGO_PATH = `${HERE}/assets/logos/cc-lockup-familymedicine.png`;
+const ROOT = resolve(HERE, '..');
+const FONTS = `${ROOT}/assets/fonts`;
+const LOGO_PATH = `${ROOT}/assets/logos/cc-lockup-familymedicine.png`;
 
 // ── location data ──────────────────────────────────────────────────────────────
 const LOCATIONS: Record<string, { name: string; street: string; city: string; state: string; zip: string; phone: string; fax: string }> = {

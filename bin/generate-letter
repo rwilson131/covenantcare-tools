@@ -9,4 +9,4 @@ while [ -h "$SOURCE" ]; do
   [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
 done
 SCRIPT_DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
-exec bun "$SCRIPT_DIR/../generate-letter.ts" "$@"
+exec bun "$SCRIPT_DIR/../src/generate-letter.ts" "$@"

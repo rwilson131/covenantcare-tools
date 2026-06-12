@@ -1,6 +1,7 @@
 node_modules/
 .DS_Store
 *.pdf
+!samples/*.pdf
 *.__letter.html
 *.__gen.html
 bun.lock

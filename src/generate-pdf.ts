@@ -16,6 +16,7 @@ import { fileURLToPath } from 'url';
 import { marked } from 'marked';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
+const ROOT = resolve(HERE, '..');
 
 // ---- args ----
 const argv = process.argv.slice(2);
@@ -80,7 +81,7 @@ const bodyHtml = marked.parse(raw, { async: false }) as string;
 
 // ---- fonts as base64 data URIs (so Chrome renders them reliably) ----
 const fontFace = (family: string, file: string, weight = 'normal', style = 'normal') => {
-  const p = `${HERE}/assets/fonts/${file}`;
+  const p = `${ROOT}/assets/fonts/${file}`;
   if (!existsSync(p)) return '';
   const b64 = readFileSync(p).toString('base64');
   const fmt = file.endsWith('.otf') ? 'opentype' : 'truetype';
@@ -95,8 +96,8 @@ const fonts = [
   fontFace('Libertine', 'LinLibertine-BoldItalic.otf', 'bold', 'italic'),
 ].join('\n');
 
-const wordmarkB64 = existsSync(`${HERE}/assets/logos/cc-wordmark.png`)
-  ? 'data:image/png;base64,' + readFileSync(`${HERE}/assets/logos/cc-wordmark.png`).toString('base64') : '';
+const wordmarkB64 = existsSync(`${ROOT}/assets/logos/cc-wordmark.png`)
+  ? 'data:image/png;base64,' + readFileSync(`${ROOT}/assets/logos/cc-wordmark.png`).toString('base64') : '';
 
 const NAVY = '#003F87', RED = '#C8102E', CHARCOAL = '#2A2A2A';
 const footer = `<span style="color:${NAVY}"><b><i>Covenant</i>Care Practices</b> | (931) 245-1150 | www.<i>Covenant</i>CarePractices.com</span>`;
