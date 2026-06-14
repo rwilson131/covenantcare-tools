@@ -103,7 +103,7 @@ Copy a template, fill in the frontmatter and body, then run `generate-letter.ts`
 |--------|-------|-------------|
 | Robert Wilson, MD | Chairman, CovenantCare Practices | Board-level, legal, external partners |
 | Alisha Harvey | President, CovenantCare Practices | Operations, vendor, staff communications |
-| Robinson O'Hara Rodriguez, PA-C | Physician Assistant | Patient-facing, clinical outreach |
+| Jewell Kaylor, NP | EVP Clinical Affairs, CovenantCare Practices | Clinical programs, provider outreach, credentialing |
 
 ---
 
